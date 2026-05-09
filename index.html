@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="description" content="Xanedan - Cafe & Rest | تامەکا جیاواز و پێشکەفتی">
+    <title>XANEDAN | Cafe & Rest 🔥</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Premium Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+        <div class="loading-ring"></div>
+        <div class="loading-logo">
+            <i class="fas fa-fire"></i>
+        </div>
+        <p class="loading-text">XANEDAN</p>
+        <div class="loading-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Premium Custom Cursor -->
+<div class="custom-cursor"></div>
+
+<!-- Entrance Gate -->
+<div class="entrance-gate" id="entranceGate">
+    <div class="gate-backdrop"></div>
+    <div class="gate-content">
+        <div class="gate-rings">
+            <div class="gate-ring ring1"></div>
+            <div class="gate-ring ring2"></div>
+            <div class="gate-ring ring3"></div>
+        </div>
+        <button class="gate-btn" id="revealBtn">
+            <i class="fas fa-pizza-slice"></i>
+            <span>Enter XANEDAN</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="gate-text">فەرموو تاقی بکە</p>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient-1"></div>
+        <div class="bg-gradient-2"></div>
+        <div class="bg-gradient-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Video Background (Optional overlay) -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo" poster="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&auto=format">
+            <source src="pizzaxanedan.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- MODERN STICKY HEADER -->
+    <header class="modern-header" id="modernHeader">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fas fa-fire"></i>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">XANEDAN</span>
+                    <span class="logo-type">Cafe & Restaurant</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#home" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#menu" class="nav-link" data-page="menu">
+                    <i class="fas fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+                <a href="#about" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="#contact" class="nav-link" data-page="contact">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            
+            <div class="header-right">
+                <div class="delivery-chip">
+                    <i class="fas fa-motorcycle"></i>
+                    <div class="chip-info">
+                        <strong>24/7 گەهاندن</strong>
+                        <span>بلەز و پاکژ</span>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-inner">
+                <a href="#home" class="mobile-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#menu" class="mobile-link" data-page="menu">
+                    <i class="fas fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+                <a href="#about" class="mobile-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="#contact" class="mobile-link" data-page="contact">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-progress"></div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - Modern Redesign -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-badge" data-aos="fade-up">
+                <i class="fas fa-fire"></i>
+                <span>ئەزموونا خارن درۆستکەرەکا نایابا کوردی</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                تام بکە<br>
+                <span class="hero-highlight">خوارنەکا خەیالی</span>
+            </h1>
+            <p class="hero-desc" data-aos="fade-up" data-aos-delay="200" dir="rtl">
+                تاقیکرنەکا تاما ڕەسەنا خارنێت کوردی بکە کو ب سۆزڤە هاتییە دروستکرن، ب ڕەنگینیی دهێنە پێشکێش کرن، دگەهینینە بەر دەرگەهێن هەوە.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="btn-primary">
+                    <span>پەیوەندیێ بمە بکە</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#menu" class="btn-secondary">
+                    <i class="fas fa-book-open"></i>
+                    <span>مینیویێ ڤەکە</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-value">24/7</span>
+                        <span class="stat-label">خزمەت</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <span class="stat-value">30min</span>
+                        <span class="stat-label">گەهاندن</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">هەڵسەنگاندن</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION - Modern Grid -->
+    <section id="menu" class="menu-section">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">بەشێ خوارن و ڤەخوارنان</span>
+                <h2 class="section-title"><span class="title-accent">مینیو</span></h2>
+                <p class="section-subtitle">هەڵبژاردنا خوارنێت بەرزێت مە ڤەببینەڤە کو ب وردبینی هاتینە کومڤەکرن</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="all">هەمی</button>
+                <button class="tab-btn" data-tab="breakfast">تێشت</button>
+                <button class="tab-btn" data-tab="main">خوارنیت سەرەکی</button>
+                <button class="tab-btn" data-tab="kurdish">خوارنێت کوردی</button>
+                <button class="tab-btn" data-tab="grill">خوارنیت بژارتی</button>
+                <button class="tab-btn" data-tab="drinks">ڤەخوارن</button>
+                <button class="tab-btn" data-tab="desserts">شریناهی</button>
+                <button class="tab-btn" data-tab="icecream">ساڕدەمەنی</button>
+                <button class="tab-btn" data-tab="fruits">فێقی</button>
+                <button class="tab-btn" data-tab="cake">کێك</button>
+                <button class="tab-btn" data-tab="kunafa">کونافە</button>
+                <button class="tab-btn" data-tab="hookah">نەرگیەل</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid" data-aos="fade-up">
+                <!-- Breakfast -->
+                <div class="menu-card" data-category="breakfast">
+                    <div class="menu-card-image">
+                        <img src="kdbp.png" alt="Breakfast">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="breakfasts.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>تێشتا سپێدان</h3>
+                        <p>تێشتا سپێدا ب شێوازەکی خۆمالی و کەرەستەیێن تازە</p>
+                        <div class="menu-price">بهایێن گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-card" data-category="main">
+                    <div class="menu-card-image">
+                        <img src="qaleall.png" alt="Main Course">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="main-foods.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>خوارنێت سەرەکی</h3>
+                        <p>هەلبژرادنا تایبەتا خوارن دروستکەران</p>
+                        <div class="menu-price">ببهایێن گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Kurdish -->
+                <div class="menu-card" data-category="kurdish">
+                    <div class="menu-card-image">
+                        <img src="kfall.png" alt="Kurdish Food">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="kurdish-foods.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>خوارنێت کوردی</h3>
+                        <p>خۆمالی و تازە و ب تامەکا جیاواز</p>
+                        <div class="menu-price">ببهایێن گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Grill -->
+                <div class="menu-card" data-category="grill">
+                    <div class="menu-card-image">
+                        <img src="allgrills.png" alt="Grill">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="grills.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-fire"></i></div>
+                        <h3>خوارنێت بژارتی</h3>
+                        <p>خوارنێت بژارتی ب گوشتێ خۆمالی و تازە و لەزەت</p>
+                        <div class="menu-price">ببهایین گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-card-image">
+                        <img src="alldrinks.png" alt="Drinks">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="drinks.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-glass-cheers"></i></div>
+                        <h3>ڤەخوارن</h3>
+                        <p>ڤەخۆ و خۆ نوی بکەڤە</p>
+                        <div class="menu-price">ببهایێن گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Desserts / Crepes -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="allcreps.png" alt="Desserts">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="sweets.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-cake-candles"></i></div>
+                        <h3>کرێپ</h3>
+                        <p>کرێپا مە تاقی بکە و جیاوازیێ ببینە</p>
+                        <div class="menu-price">ببهایێن گونجایی</div>
+                    </div>
+                </div>
+
+                <!-- Ice Cream -->
+                <div class="menu-card" data-category="icecream">
+                    <div class="menu-card-image">
+                        <img src="allicecream.png" alt="Ice Cream">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="icecreams.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-ice-cream"></i></div>
+                        <h3>ساڕدەمەنی</h3>
+                        <p>بەستنێن تایبەت و خۆش ب تامێن جیاواز</p>
+                        <div class="menu-price">٢،٠٠٠ دینار</div>
+                    </div>
+                </div>
+
+                <!-- Fruits -->
+                <div class="menu-card" data-category="fruits">
+                    <div class="menu-card-image">
+                        <img src="allfruits.png" alt="Fresh Fruits">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="fruits.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-apple-alt"></i></div>
+                        <h3>فێقی</h3>
+                        <p>فێقیێن خانەدان تازە و پاکژ</p>
+                        <div class="menu-price">ب بهایەك گونجای</div>
+                    </div>
+                </div>
+
+                <!-- Cake (کێك) - FIXED: links to cakes.html -->
+                <div class="menu-card" data-category="cake">
+                    <div class="menu-card-image">
+                        <img src="allcakes.png" alt="Cake">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="cakes.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <h3>کێك</h3>
+                        <p>کێكێن شرین و خۆش</p>
+                        <div class="menu-price">ب بهایەك گونجای</div>
+                    </div>
+                </div>
+
+                <!-- Kunafa -->
+                <div class="menu-card" data-category="kunafa">
+                    <div class="menu-card-image">
+                        <img src="allkunafas.png" alt="Kunafa">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="kunafa.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-cheese"></i></div>
+                        <h3>کونافە</h3>
+                        <p>کونافەیا تایبەت ب پەنیری و شریناهیان</p>
+                        <div class="menu-price">ب بهایەك گونجای</div>
+                    </div>
+                </div>
+
+                <!-- Hookah / Narghile -->
+                <div class="menu-card" data-category="hookah">
+                    <div class="menu-card-image">
+                        <img src="allnargila.png" alt="Hookah">
+                        <div class="menu-card-overlay">
+                            <button class="quick-view" data-page="hookah.html">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-icon"><i class="fas fa-smoking"></i></div>
+                        <h3>نەرگیلە</h3>
+                        <p>تامێن تایبەت و جیاواز</p>
+                        <div class="menu-price">ب بهایەك گونجای</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Gallery -->
+            <div class="gallery-section" data-aos="fade-up">
+                <h3 class="gallery-title">گەشتەکا تایبەت</h3>
+                <div class="gallery-slider">
+                    <button class="gallery-nav prev-btn" id="galleryPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="gallery-frame">
+                        <img id="galleryImage" src="dokhava.png" alt="Gallery">
+                        <div id="galleryCaption" class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav next-btn" id="galleryNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-gift"></i></div>
+                    <h4>گەهاندنا بەلاش</h4>
+                    <p>ئەگەر داخوازی پتربوو ژ بهایێ ٥٠،٠٠٠ دیناران</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h4>گەهاندنەکا بلەز</h4>
+                    <p>٤٠ یان هەتا خوارتر ٤٠ خۆلەکان ئەگەر چ ئاریشە نەبن</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-percent"></i></div>
+                    <h4>ئێکەم کڕین</h4>
+                    <p>20% داشکاندن</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-tag">چیروکا مە</span>
+                    <h2 class="section-title">هاتییە درۆستکرن <span class="title-accent">ب سۆزڤە</span></h2>
+                    <p class="about-text">XANEDAN:<br> نەریتێ خوارن درۆستکرنێت ڕەسەن یێت کوردی دگەل پێشکێشکرنا مودێرن کومڤەدکەتەڤە، هوموو خوارنەک: چیروکەکا تایبەت و کوالێتی و پابەندبون و باش و خۆش بخۆڤە دگریت </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>پێکهاتێت تازە و پاکژ و تایبەت</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>خوارنگەهەکا خۆدان بڕوانامەیا پاك و پاکژیێ</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ئەزموونا زێدتر ژ +١٠ سالان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-desc">کڕیارێت ڕۆژانە</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-desc">حەژێکرنا بکڕان</span>
+                        <div class="stat-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid" data-aos="fade-up">
+                <div class="contact-info">
+                    <span class="section-tag">پەیوەندیێ بکە</span>
+                    <h2 class="section-title">بەژداربە <span class="title-accent">دگەل مە</span></h2>
+                    <p>بتنێ ب ئێك پەیوەندی خوارنا خۆ یا تایبەت داخوازبکە</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>موبائیل</strong>
+                                <p>+964 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>+964 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>جهێ مە</strong>
+                                <p>ئاکرێ لنزیك قشلا کەڤن</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/964123456789" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>داخوازبکە ب ڕێکا WhatsApp</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-map" data-aos="fade-up" data-aos-delay="100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.4567!2d43.4124!3d36.8124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40066d7ed995091d%3A0x5f06077f5556d8d0!2sXanedan%20Cafe%20%26%20Rest!5e1!3m2!1sen!2siq!4v1700000000000!5m2!1sen!2siq" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 24px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-fire"></i>
+                    <h3>XANEDAN</h3>
+                </div>
+                <p>خوارنگەها مە ئەڤە ژساڵا ٢٠١٨ وەرە هەتا ئەڤڕۆ خزمەت و تاما ڕەسەنا کوردی و ب خۆشتەڤیڤە پێشكێش دکەت</p>
+                <div class="footer-badge">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +964 123 456 789</p>
+                <p><i class="fab fa-whatsapp"></i> +964 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Akre, Kurdistan</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/xanedan_cafe.rest" target="_blank" class="social-link insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/xanedan.rest" target="_blank" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@xanedan_cafe_rest" target="_blank" class="social-link tt"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.snapchat.com/add/xanedan" target="_blank" class="social-link sc"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 XANEDAN - Cafe & Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="description" content="بژارتی | گۆشتێ تازە و خۆمالی ل Xanedan - باشترین بژارتیێن کوردی">
+    <title>بژارتی | Xanedan 🔥</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="glstyle.css">
+</head>
+<body>
+
+<!-- Premium Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+        <div class="loading-ring"></div>
+        <div class="loading-logo">
+            <i class="fas fa-fire"></i>
+        </div>
+        <p class="loading-text">XANEDAN</p>
+        <div class="loading-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Premium Custom Cursor -->
+<div class="custom-cursor"></div>
+
+<div class="main-content">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient-1"></div>
+        <div class="bg-gradient-2"></div>
+        <div class="bg-gradient-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo" poster="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&auto=format">
+            <source src="xanedangrills.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Modern Header -->
+    <header class="modern-header" id="modernHeader" data-aos="fade-down">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fas fa-fire"></i>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">XANEDAN</span>
+                    <span class="logo-type">Cafe & Restaurant</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html#home" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="index.html#menu" class="nav-link">
+                    <i class="fas fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+                <a href="index.html#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            
+            <div class="header-right">
+                <div class="delivery-chip">
+                    <i class="fas fa-motorcycle"></i>
+                    <div class="chip-info">
+                        <strong>24/7 Delivery</strong>
+                        <span>Fast & Fresh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-progress"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                <span>بژارتی</span>
+            </div>
+            <h1 class="hero-title">
+                گۆشتێ <span class="hero-highlight">تازە و خۆمالی</span>
+            </h1>
+            <p class="hero-desc">
+                گۆشتێ تازە و خۆمالی لە ناڤێ جهێ تە
+            </p>
+        </div>
+    </section>
+
+    <!-- Grills Menu Grid -->
+    <section class="menu-section" data-aos="fade-up">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Premium Collection</span>
+                <h2 class="section-title">Signature <span class="title-accent">Grills</span></h2>
+                <p class="section-subtitle">Authentic flame-grilled perfection</p>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Item 1 - Kebab -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="kabab.png" alt="Kebab">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>کەباب</h3>
+                        <p class="card-subtitle">Traditional Kebab</p>
+                        <div class="pricing-grid">
+                            <div class="price-option">
+                                <span class="size">1 Person</span>
+                                <span class="amount">4,000 IQD</span>
+                            </div>
+                            <div class="price-option">
+                                <span class="size">Half Person</span>
+                                <span class="amount">8,000 IQD</span>
+                            </div>
+                            <div class="price-option">
+                                <span class="size">4 Persons</span>
+                                <span class="amount">15,000 IQD</span>
+                            </div>
+                        </div>
+                        <div class="ingredients">
+                            <i class="fas fa-fire"></i>
+                            <span>دهێتە درۆستکرن ب گۆشتێ کەبابێ یێ بژارتی</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="کەباب - Kebab">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 - Grilled Meat Cubes -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="grilledtka.png" alt="Grilled Meat Cubes">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>تکێ گۆشتی</h3>
+                        <p class="card-subtitle">Grilled Meat Cubes</p>
+                        <div class="pricing-grid">
+                            <div class="price-option"><span class="size">1 Person</span><span class="amount">4,000 IQD</span></div>
+                            <div class="price-option"><span class="size">Half Person</span><span class="amount">8,000 IQD</span></div>
+                            <div class="price-option"><span class="size">4 Persons</span><span class="amount">15,000 IQD</span></div>
+                        </div>
+                        <div class="ingredients"><i class="fas fa-fire"></i><span>دهێتە درۆستکرن ب گۆشتێ بەرخی یێ بژارتی</span></div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="تکێ گۆشتی - Grilled Meat">
+                                <i class="fas fa-shopping-cart"></i><span>Order Now</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 - Grilled Chicken -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="tka.png" alt="Grilled Chicken">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>تکێ مریشكێ</h3>
+                        <p class="card-subtitle">Grilled Chicken Cubes</p>
+                        <div class="pricing-grid">
+                            <div class="price-option"><span class="size">1 Person</span><span class="amount">4,000 IQD</span></div>
+                            <div class="price-option"><span class="size">Half Person</span><span class="amount">8,000 IQD</span></div>
+                            <div class="price-option"><span class="size">4 Persons</span><span class="amount">15,000 IQD</span></div>
+                        </div>
+                        <div class="ingredients"><i class="fas fa-fire"></i><span>دهێتە درۆستکرن ب سینگێ مریشکێ یێ بژارتی</span></div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="تکێ مریشکێ - Grilled Chicken">
+                                <i class="fas fa-shopping-cart"></i><span>Order Now</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 - Lamb Liver -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="lambliver.png" alt="Lamb Liver">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>مێلاك</h3>
+                        <p class="card-subtitle">Grilled Lamb Liver</p>
+                        <div class="pricing-grid">
+                            <div class="price-option"><span class="size">1 Person</span><span class="amount">4,000 IQD</span></div>
+                            <div class="price-option"><span class="size">Half Person</span><span class="amount">8,000 IQD</span></div>
+                            <div class="price-option"><span class="size">4 Persons</span><span class="amount">15,000 IQD</span></div>
+                        </div>
+                        <div class="ingredients"><i class="fas fa-fire"></i><span>دهێتە درۆستکرن ژ مێلاکا بەرخی یا بژارتی</span></div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="مێلاك - Lamb Liver">
+                                <i class="fas fa-shopping-cart"></i><span>Order Now</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 - Mix Shish -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="mixshish.png" alt="Mix Shish">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>شیشکا تێکەل</h3>
+                        <p class="card-subtitle">Mix Shish Platter</p>
+                        <div class="pricing-grid">
+                            <div class="price-option"><span class="size">1 Person</span><span class="amount">4,000 IQD</span></div>
+                            <div class="price-option"><span class="size">Half Person</span><span class="amount">8,000 IQD</span></div>
+                            <div class="price-option"><span class="size">4 Persons</span><span class="amount">15,000 IQD</span></div>
+                        </div>
+                        <div class="ingredients"><i class="fas fa-fire"></i><span>تێکهەلا بژارتیان (گۆشت، مریشك، کەباب)</span></div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="شیشکا تێکەل - Mix Shish">
+                                <i class="fas fa-shopping-cart"></i><span>Order Now</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6 - Mix Kebab -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="mixkabab.png" alt="Mix Kebab">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>کەباب مەحشی</h3>
+                        <p class="card-subtitle">Herbed Kebab</p>
+                        <div class="pricing-grid">
+                            <div class="price-option"><span class="size">1 Person</span><span class="amount">4,000 IQD</span></div>
+                            <div class="price-option"><span class="size">Half Person</span><span class="amount">8,000 IQD</span></div>
+                            <div class="price-option"><span class="size">4 Persons</span><span class="amount">15,000 IQD</span></div>
+                        </div>
+                        <div class="ingredients"><i class="fas fa-fire"></i><span>گۆشتێ کەبابێ یێ بژارتی کو تێکهەلە ب سیر و کەرەفسێ</span></div>
+                        <div class="price-section">
+                            <span class="price">From 4,000 IQD</span>
+                            <button class="order-btn" data-item="کەباب مەحشی - Mix Kebab">
+                                <i class="fas fa-shopping-cart"></i><span>Order Now</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Note Section -->
+    <section class="note-section" data-aos="fade-up">
+        <div class="note-container">
+            <div class="note-card">
+                <i class="fas fa-fire"></i>
+                <p>هەموو بژارتیێن مە ب گۆشتەکێ نوی و تام، ب گۆشتێ خۆمالی و بەهاراتێن تایبەت</p>
+                <i class="fas fa-fire"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" data-aos="fade-up">
+        <div class="section-container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>Blazing fast delivery within 30-40 minutes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Fresh Premium Meat</h4>
+                    <p>Always fresh, premium quality cuts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h4>24/7 Support</h4>
+                    <p>Customer service around the clock</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-button-container" data-aos="fade-up">
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-right"></i>
+            <span>زڤڕین بۆ لاپەڕەیێ سەرەکی</span>
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-fire"></i>
+                    <h3>XANEDAN</h3>
+                </div>
+                <p>Premium Kurdish Restaurant serving authentic flavors with love since 2020</p>
+                <div class="footer-badge">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +964 123 456 789</p>
+                <p><i class="fab fa-whatsapp"></i> +964 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Akre, Kurdistan</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/xanedan_cafe.rest" target="_blank" class="social-link insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/xanedan.rest" target="_blank" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@xanedan_cafe_rest" target="_blank" class="social-link tt"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.snapchat.com/add/xanedan" target="_blank" class="social-link sc"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 XANEDAN - Cafe & Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="glscript.js"></script>
+</body>
+</html>

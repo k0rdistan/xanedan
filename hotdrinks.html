@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="description" content="ڤەخوارنێن گەرم | ڤەخوارنێن گەرم لە Xanedan - Premium Hot Beverages">
+    <title>ڤەخوارنێن گەرم | Xanedan 🔥</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="hootdrinksstyle.css">
+</head>
+<body>
+
+<!-- Premium Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+        <div class="loading-ring"></div>
+        <div class="loading-logo">
+            <i class="fas fa-fire"></i>
+        </div>
+        <p class="loading-text">XANEDAN</p>
+        <div class="loading-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Premium Custom Cursor -->
+<div class="custom-cursor"></div>
+
+<div class="main-content">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient-1"></div>
+        <div class="bg-gradient-2"></div>
+        <div class="bg-gradient-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo" poster="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=1920&auto=format">
+            <source src="drinks.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Modern Header -->
+    <header class="modern-header" id="modernHeader" data-aos="fade-down">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fas fa-fire"></i>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">XANEDAN</span>
+                    <span class="logo-type">Cafe & Restaurant</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html#home" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="index.html#menu" class="nav-link">
+                    <i class="fas fa-utensils"></i>
+                    <span>Menu</span>
+                </a>
+                <a href="index.html#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            
+            <div class="header-right">
+                <div class="delivery-chip">
+                    <i class="fas fa-motorcycle"></i>
+                    <div class="chip-info">
+                        <strong>24/7 Delivery</strong>
+                        <span>Fast & Fresh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-progress"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                <span>ڤەخوارنێن گەرم</span>
+            </div>
+            <h1 class="hero-title">
+                ڤەخوارنێت <span class="hero-highlight">گەرم</span>
+            </h1>
+            <p class="hero-desc">
+                ڤەخوارنێن گەرم ب تامێن جیاواز و پڕ ل لەزەتێ
+            </p>
+        </div>
+    </section>
+
+    <!-- Hot Drinks Grid -->
+    <section class="menu-section" data-aos="fade-up">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Premium Collection</span>
+                <h2 class="section-title">Hot <span class="title-accent">Beverages</span></h2>
+                <p class="section-subtitle">Warm your soul with our signature hot drinks</p>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Item 1 - Tea -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="tea.png" alt="Tea">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>چا</h3>
+                        <p class="card-subtitle">Traditional Tea</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">500 IQD</span>
+                            <button class="order-btn" data-item="چا - Tea">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 - Plain Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="pincoffee.png" alt="Plain Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا سادە</h3>
+                        <p class="card-subtitle">Plain Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا سادە - Plain Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 - Turkish Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="kazancoffee.png" alt="Turkish Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا کەزانێ</h3>
+                        <p class="card-subtitle">Turkish Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 7 min</span>
+                        </div>
+                        <div class="ingredients">
+                            <i class="fas fa-coffee"></i>
+                            <span>Authentic Turkish Coffee with rich flavor</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">3,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا کەزانێ - Turkish Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 - Pistachio Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="pistachiocoffee.png" alt="Pistachio Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا فستەقێ</h3>
+                        <p class="card-subtitle">Pistachio Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا فستەقێ - Pistachio Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 - Nuts Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="gezcoffee.png" alt="Nuts Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا گیزێ</h3>
+                        <p class="card-subtitle">Nuts Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا گیزێ - Nuts Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 - Hazel Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="bndaqqcoffee.png" alt="Hazel Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا بندەقێ</h3>
+                        <p class="card-subtitle">Hazel Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا بندەقێ - Hazel Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 - Almond Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="bahevcoffee.png" alt="Almond Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا باهیڤێ</h3>
+                        <p class="card-subtitle">Almond Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا باهیڤێ - Almond Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 - Xanedan Special Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="xanedancoffee.png" alt="Xanedan Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-crown"></i></div>
+                        <h3>قەهوا خانەدان</h3>
+                        <p class="card-subtitle">Xanedan Special</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">3,000 IQD</span>
+                            <button class="order-btn" data-item="قەهوا خانەدان - Xanedan Special Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 - Orange Coffee -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="orangecoffee.png" alt="Orange Coffee">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>قەهوا پرتەقالێ</h3>
+                        <p class="card-subtitle">Orange Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">2,500 IQD</span>
+                            <button class="order-btn" data-item="قەهوا پرتەقالێ - Orange Coffee">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 - Moca -->
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="xanedancoffee.png" alt="Moca">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                        <h3>موکا</h3>
+                        <p class="card-subtitle">Moca Coffee</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> Hot</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">3,000 IQD</span>
+                            <button class="order-btn" data-item="موکا - Moca">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" data-aos="fade-up">
+        <div class="section-container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>Blazing fast delivery within 30-40 minutes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Freshly Brewed</h4>
+                    <p>Always fresh, premium quality coffee</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h4>24/7 Support</h4>
+                    <p>Customer service around the clock</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-button-container" data-aos="fade-up">
+        <a href="drinks.html" class="back-home">
+            <i class="fas fa-arrow-right"></i>
+            <span>زڤڕین بۆ ڤەخوارن</span>
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-fire"></i>
+                    <h3>XANEDAN</h3>
+                </div>
+                <p>Premium Kurdish Restaurant serving authentic flavors with love since 2020</p>
+                <div class="footer-badge">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +964 123 456 789</p>
+                <p><i class="fab fa-whatsapp"></i> +964 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Akre, Kurdistan</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/xanedan_cafe.rest" target="_blank" class="social-link insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/xanedan.rest" target="_blank" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@xanedan_cafe_rest" target="_blank" class="social-link tt"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.snapchat.com/add/xanedan" target="_blank" class="social-link sc"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 XANEDAN - Cafe & Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="hootdrinksscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XANEDAN | Premium Kurdish Cuisine</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050505;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#d4a762,#ffcf7d);
+    border-radius:20px;
+}
+
+/* =========================
+   VIDEO INTRO
+========================= */
+
+.video-intro{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+    z-index:9999;
+    overflow:hidden;
+    background:black;
+    transition:1.4s ease;
+}
+
+.video-intro.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.video-intro video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.45);
+    transform:scale(1.1);
+}
+
+.video-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.2));
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content{
+    position:absolute;
+    left:8%;
+    bottom:12%;
+    z-index:10;
+    max-width:700px;
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-subtitle{
+    color:#d4a762;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    font-size:.9rem;
+}
+
+.hero-title{
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:1;
+    font-weight:900;
+    margin-bottom:25px;
+}
+
+.hero-text{
+    color:#d6d6d6;
+    line-height:1.9;
+    max-width:600px;
+    font-size:1.05rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 34px;
+    border:none;
+    border-radius:60px;
+    cursor:pointer;
+    transition:.4s ease;
+    font-weight:700;
+    font-size:1rem;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#d4a762,#ffcf7d);
+    color:black;
+}
+
+.btn-primary:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(212,167,98,.45);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    color:white;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:20;
+}
+
+.scroll-indicator span{
+    width:34px;
+    height:56px;
+    border:2px solid rgba(255,255,255,.5);
+    display:block;
+    border-radius:30px;
+    position:relative;
+}
+
+.scroll-indicator span::before{
+    content:'';
+    position:absolute;
+    top:10px;
+    left:50%;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    transform:translateX(-50%);
+    animation:scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim{
+
+    0%{
+        opacity:0;
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translate(-50%,18px);
+    }
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:24px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d4a762;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#d4a762;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(50px);
+    transition:1.5s ease;
+}
+
+.main-content.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:120px 8%;
+}
+
+.section-title{
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#bdbdbd;
+    max-width:700px;
+    margin:0 auto 70px;
+    line-height:1.8;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:30px;
+    overflow:hidden;
+    transition:.5s ease;
+    backdrop-filter:blur(20px);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#d4a762;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:30px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+/* =========================
+   GLOW EFFECTS
+========================= */
+
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#d4a762;
+    filter:blur(180px);
+    opacity:.12;
+    z-index:-1;
+}
+
+.glow-1{
+    top:-200px;
+    left:-100px;
+}
+
+.glow-2{
+    bottom:-250px;
+    right:-100px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:50px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#8f8f8f;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+        left:6%;
+        right:6%;
+    }
+
+    .section-title{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     VIDEO INTRO
+========================= -->
+
+<div class="video-intro" id="videoIntro">
+
+    <!-- REAL VIDEO -->
+    <video id="introVideo" muted playsinline preload="auto">
+
+        <!-- YOUR LOCAL VIDEO -->
+        <source src="images/xanedan.mp4" type="video/mp4">
+
+        <!-- ONLINE FALLBACK VIDEO -->
+        <source src="https://cdn.coverr.co/videos/coverr-chef-preparing-a-meal-1564847081896?download=1080p" type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">
+            AUTHENTIC KURDISH EXPERIENCE
+        </p>
+
+        <h1 class="hero-title">
+            Premium Kurdish Cuisine
+        </h1>
+
+        <p class="hero-text">
+            Discover rich Kurdish flavors with cinematic visuals,
+            luxury atmosphere, modern storytelling, and unforgettable dining experiences.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn btn-primary">
+                Explore Menu
+            </button>
+
+            <button class="btn btn-secondary">
+                Book Table
+            </button>
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+    </div>
+
+</div>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<div class="main-content" id="mainContent">
+
+<nav>
+
+    <div class="logo">
+        XANE<span>DAN</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Experience</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+
+</nav>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<!-- =========================
+     SECTION 1
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Kurdish Cuisine, Elevated
+    </h2>
+
+    <p class="section-subtitle">
+        Crafted with premium ingredients, rich Kurdish traditions,
+        and a luxury modern dining atmosphere.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Traditional Recipes</h3>
+
+                <p>
+                    Authentic Kurdish meals inspired by generations
+                    of culture and unforgettable flavors.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Luxury Interior</h3>
+
+                <p>
+                    Elegant cinematic lighting with a premium
+                    modern atmosphere designed for comfort.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Premium Experience</h3>
+
+                <p>
+                    Experience unforgettable hospitality,
+                    smooth service, and rich Kurdish culture.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SECTION 2
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Cinematic Dining Experience
+    </h2>
+
+    <p class="section-subtitle">
+        Built with modern UI/UX, smooth animations,
+        cinematic visuals, and immersive storytelling.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>Modern Design</h3>
+
+                <p>
+                    Premium layouts, modern gradients,
+                    glassmorphism, and responsive design.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>Smooth Motion</h3>
+
+                <p>
+                    Beautiful transitions and cinematic interactions
+                    that make the website feel alive.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>Future Experience</h3>
+
+                <p>
+                    Crafted to feel immersive, emotional,
+                    and luxury across all devices.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 XANEDAN · Premium Kurdish Cuisine
+</footer>
+
+</div>
+
+<script>
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const introVideo = document.getElementById('introVideo');
+const videoIntro = document.getElementById('videoIntro');
+const mainContent = document.getElementById('mainContent');
+
+let videoFinished = false;
+
+/* =========================
+   VIDEO SETUP
+========================= */
+
+introVideo.pause();
+introVideo.currentTime = 0;
+introVideo.muted = true;
+
+/* =========================
+   WAIT FOR VIDEO
+========================= */
+
+introVideo.addEventListener('loadedmetadata', () => {
+
+    const duration = introVideo.duration;
+
+    createScrollSpace(duration);
+
+});
+
+/* =========================
+   CREATE SCROLL SPACE
+========================= */
+
+function createScrollSpace(duration){
+
+    const spacer = document.createElement('div');
+
+    spacer.style.height = `${duration * 350}px`;
+
+    spacer.style.width = '1px';
+
+    spacer.style.opacity = '0';
+
+    spacer.id = 'scrollSpacer';
+
+    document.body.appendChild(spacer);
+
+}
+
+/* =========================
+   VIDEO SCRUBBING
+========================= */
+
+function updateVideo(){
+
+    if(videoFinished) return;
+
+    const scrollTop = window.scrollY;
+
+    const maxScroll =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollFraction = scrollTop / maxScroll;
+
+    const duration = introVideo.duration;
+
+    if(duration){
+
+        introVideo.currentTime =
+        duration * scrollFraction;
+
+    }
+
+    /* END VIDEO */
+
+    if(scrollFraction >= 0.98){
+
+        videoFinished = true;
+
+        videoIntro.classList.add('hide');
+
+        mainContent.classList.add('show');
+
+        document.body.style.background = '#050505';
+
+        setTimeout(() => {
+
+            window.scrollTo({
+                top:window.innerHeight,
+                behavior:'smooth'
+            });
+
+        },300);
+
+    }
+
+}
+
+/* =========================
+   SCROLL EVENT
+========================= */
+
+window.addEventListener('scroll', () => {
+
+    requestAnimationFrame(updateVideo);
+
+});
+
+/* =========================
+   PARALLAX EFFECT
+========================= */
+
+window.addEventListener('mousemove',(e)=>{
+
+    const x = (window.innerWidth / 2 - e.pageX) / 30;
+    const y = (window.innerHeight / 2 - e.pageY) / 30;
+
+    introVideo.style.transform =
+    `scale(1.1) translate(${x}px,${y}px)`;
+
+});
+
+</script>
+
+</body>
+</html>
